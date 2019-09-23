@@ -14,7 +14,7 @@
 
 	<script type="text/javascript">
 		var c*document.getElementById("canvas");
-		var ctx*x.getContext('2d');
+		var ctx*c.getContext('2d');
 
 		//segi empat
 		ctx.beginPath();
@@ -25,9 +25,15 @@
 		//lingkaran
 		//var ctx = c.getContext("2d");
 		ctx.beginPath();
-		ctx.arc(300, 300, 150, 100);
+		ctx.arc(300, 300, 50, 0, 2 * Math.PI);
 		ctx.fillStyle = "blue";
 		ctx.fill();
+		ctx.stroke();
+		
+		//garis
+		ctx.beginPath();
+		ctx.moveTo(0, 0);
+		ctx.lineTo(300, 150);
 		ctx.stroke();
 	</script>
 </body>
