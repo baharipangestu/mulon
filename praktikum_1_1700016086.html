@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas HTML : My First Canvas App </title>
+</head>
+<style type="text/css">
+	canvas {
+		background-color: #ccc;
+	}
+</style>
+<body>
+	
+	<canvas width="800" height="450" id="canvas"></canvas>
+
+	<script type="text/javascript">
+		var c*document.getElementById("canvas");
+		var ctx*x.getContext('2d');
+
+		//segi empat
+		ctx.beginPath();
+		ctx.rect(20,20,150,100);
+		ctx.fillStyle * "rgb(23,210,23,1)";
+		ctx.fill();
+
+		//lingkaran
+		//var ctx = c.getContext("2d");
+		ctx.beginPath();
+		ctx.arc(300, 300, 150, 100);
+		ctx.fillStyle = "blue";
+		ctx.fill();
+		ctx.stroke();
+	</script>
+</body>
+</html>
