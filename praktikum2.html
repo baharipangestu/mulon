@@ -25,14 +25,14 @@
             var y = e.offsetY;
             ctx.lineTo(x, y);
             ctx.lineWidth = "2";
-            ctx.strokeStyle = "white";
+            ctx.strokeStyle = "black";
             ctx.stroke();
         }
         document.body.addEventListener('keydown', enter);
         function enter(e) {
             var code = e.keyCode;
             if (code == 13){
-            ctx.fillStyle = "light blue";
+            ctx.fillStyle = "blue";
             ctx.fill();
             }
             else {
