@@ -59,8 +59,8 @@ function sprite(url,x,y)
 {
     this.x=x;
     this.y=y;
-    this.width=100;
-    this.height=100;
+    this.width=200;
+    this.height=200;
     var ctx=myApp.context;
     var imgObject= new Image();
     imgObject.src = url; 
@@ -113,10 +113,10 @@ function dragable(sprite,target)
     var offsetX, offsetY;
     document.body.addEventListener('mousedown',function(e)
     {      
-        offsetX=e.clientX-sprite.x;
-        offsetY=e.clientY-sprite.y;
+        offsetX=e.offsetX-sprite.x;
+        offsetY=e.offsetY-sprite.y;
         //mendeteksi pointer klik diatas objek lewat fungsi mouseIsOver
-        if(mouseIsOver(e.clientX,e.clientY,sprite))
+        if(mouseIsOver(e.offsetX,e.offsetY,sprite))
         {
           //jika klik diatas objek, deteksi pergerakan mouse dan kondisi saat mouse lepas
           //panggil fungsi mouseMove saat pointer bergerak
@@ -129,7 +129,7 @@ function dragable(sprite,target)
     {
       //gambar objek baru lewat fungsi draw() dengan posisi x dan y sama dengan posisi x dan y pointer
       //menambahkan faktor offset agar posisi drag objek tidak bergeser
-      sprite.x=e.clientX-offsetX, sprite.y=e.clientY-offsetY;     
+      sprite.x=e.offsetX-offsetX, sprite.y=e.offsetY-offsetY;     
     };
     function mouseUp(e)
     {
